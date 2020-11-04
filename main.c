@@ -5,9 +5,21 @@ extern void calculeSquareRoot(float a, float b, float c);
 
 int main (){
 	
-	float a = 5;
-    float b = 2;
-    float c = 3;
+	float a;
+    float b;
+    float c;
+
+    printf("----------FORMULA RESOLVENTE------------\n");
+    printf("Por favor, ingrese a: \n");
+    scanf("%f", &a);
+
+    printf("Por favor, ingrese b: \n");
+    scanf("%f", &b);
+
+    printf("Por favor, ingrese c: \n");
+    scanf("%f", &c);
+
+
     calculeSquareRoot(a,b,c);
 	
 	return 0;

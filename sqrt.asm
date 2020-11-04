@@ -1,9 +1,9 @@
 extern printf
 section .data
     format db "x1 es %f y x2 es %f", 10,0
-    num_a dq 1.0, 0
-    num_b dq 4.0, 0
-    num_c dq 0.0, 0
+    num_a dq 0, 0
+    num_b dq 0, 0
+    num_c dq 0, 0
     
     ac4 dq 0.0, 0
     bpow2 dq 0, 0
@@ -24,9 +24,21 @@ calculeSquareRoot:
 
     push ebp
     mov ebp, esp; for correct debugging
-    ;write your code here
 
-    
+
+    ;cargo a, b y c...
+
+    fld dword[ebp + 8]
+    fst qword[num_a] 
+
+    fld dword[ebp + 12]
+    fst qword[num_b]
+
+    fld dword[ebp + 16]
+    fst qword[num_c]
+
+    ;calculo algunos números que voy a utilizar luego y los almaceno:
+    finit
     fld qword[num_a]
     fld qword[num_c]
     fmul st0,st1
@@ -34,16 +46,18 @@ calculeSquareRoot:
     fmul st0, st1
     fst qword[ac4] ;4ac
     
-    
+    finit
     fld qword[num_b]
     fmul st0, st0
     fst qword[bpow2];b^2
     
+    finit
     fld qword[num_a]
     fld qword[two]
     fmul st0,st1 
     fst qword[a2];2a
     
+    finit
     fld qword[num_b] 
     fchs 
     fst qword[b_negative];-b
