@@ -1,0 +1,23 @@
+6.
+(​ Obligatorio​ )
+Se encuentran cargados los siguientes registros de segmento para el proceso P1:
+CS -> base address: 1000 , limit: 800
+DS -> base address: 500 , limit: 250
+SS -> base address: 4000 , limit: 200
+
+Por otro lado, el proceso lee las siguientes direcciones lógicas:
+
+A.La dirección 0 para el segmento de datos.
+B.La dirección 550 para el segmento de código.
+C.La dirección 100 para el segmento de stack.
+D.La dirección 4000 para el segmento de stack.
+
+
+Calcular la dirección física asociada a cada uno de estos.
+
+a. 500 + 0 = 500
+b. 1000 + 550 = 1550
+c. 4000 + 100 = 4100
+d. 4000 + 4000 = 8000
+
+

@@ -1,0 +1,14 @@
+4.
+Usted dispone de un dispositivo que utiliza un sistema de paginación con direcciones
+virtuales de 32 bits , 1 GB de memoria física y frames de 4 KB. ¿Cuántas entradas posee la
+tabla de páginas en cada uno de estos esquemas? (​ Obligatorio​ )
+C. Si se utiliza un sistema de paginación de un solo nivel.
+D. Si se utiliza un sistema de tabla de paginación invertido.
+
+
+c. Los frames son de 4kb, es decir: 2 * 2 * 2^10 = 2^12
+Divido la cantidad de direcciones virtuales por la cantidad de frames = 2^32 / 2^12 = 1048576 entradas.
+
+d.Como tengo usa sistema de paginación invertido tengo una entrada para cada página de la memoria física.
+Esto lo calculo así: 1gb = 2^30, 4kb = 2^12. Divido: 2^30/2^12=262144
+
